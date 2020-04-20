@@ -3,7 +3,7 @@
 3,Gyroscope.csv,Systime,EventTime,ActivityID,X,Y,Z,Phone_orientation,,,,,,,,,,,
 4,Magnetometer.csv,Systime,EventTime,ActivityID,X,Y,Z,Phone_orientation,,,,,,,,,,,
 5,TouchEvent.csv,Systime,EventTime,ActivityID,Pointer_count,PointerID,ActionID,X,Y,Pressure,Contact_size,Phone_orientation,,,,,,,
-6,KeyPressEvent.csv,Systime,PressTime,PressType,ActivityID,KeyID,Phone_orientation,,,,,,,,,,,,
+6,KeyPressEvent.csv,Systime,PressTime,ActivityID,PressType,KeyID,Phone_orientation,,,,,,,,,,,,
 7,OneFingerTouchEvent.csv,Systime,PressTime,ActivityID,TapID,Tap_type,Action_type,X,Y,Pressure,Contact_size,Phone_orientation,,,,,,,
 8,PinchEvent.csv,Systime,PressTime,ActivityID,EventType,PinchID,Time_delta,Focus_X,Focus_Y,Span,Span_X,Span_Y,ScaleFactor,Phone_orientation,,,,,
 9,ScrollEvent.csv,Systime,BeginTime,CurrentTime,ActivityID,ScrollID,Start_action_type,Start_X,Start_Y,Start_pressure,Start_size,Current_action_type,Current_X,Current_Y,Current_pressure,Current_size,Distance_X,Distance_Y,Phone_orientation
