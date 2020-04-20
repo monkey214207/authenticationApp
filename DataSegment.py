@@ -39,13 +39,8 @@ def generateTapEntityList(accData, segData):
 
 def getTapListByPathAndActivityID(path='/Users/yumei.hou/Documents/data-storage/public_dataset/100669/100669_session_1',
                                   activity_id='100669011000001'):
-    touchEventDataType = {"Systime": "int64", "ActivityID": "object", "ActionID": "object"}
-    touchEventData = pd.read_csv(os.path.join(path, "TouchEvent.csv"), usecols=[0, 2, 5], header=-1,
-                                 names=["Systime", "ActivityID", "ActionID"], dtype=touchEventDataType)
-    accDataType = {"Systime": "int64", "ActivityID": "object", "X": "float64", "Y": "float64", "Z": "float64"}
-    accData = pd.read_csv(os.path.join(path, "Accelerometer.csv"), usecols=[0, 2, 3, 4, 5], header=-1,
-                          names=["Systime", "ActivityID", "X", "Y", "Z"], dtype=accDataType)
-    print(touchEventData.dtypes)
+    touchEventData = readTouchEventData(path)
+    accData = readAccData(path)
 
     touchEventData = readByActivityID(touchEventData, activity_id)
     accData = readByActivityID(accData, activity_id)
@@ -55,3 +50,17 @@ def getTapListByPathAndActivityID(path='/Users/yumei.hou/Documents/data-storage/
     TapList = generateTapEntityList(accData, segData)
 
     return TapList
+
+
+def readAccData(path):
+    accDataType = {"Systime": "int64", "ActivityID": "object", "X": "float64", "Y": "float64", "Z": "float64"}
+    accData = pd.read_csv(os.path.join(path, "Accelerometer.csv"), usecols=[0, 2, 3, 4, 5], header=-1,
+                          names=["Systime", "ActivityID", "X", "Y", "Z"], dtype=accDataType)
+    return accData
+
+
+def readTouchEventData(path):
+    touchEventDataType = {"Systime": "int64", "ActivityID": "object", "ActionID": "object"}
+    touchEventData = pd.read_csv(os.path.join(path, "TouchEvent.csv"), usecols=[0, 2, 5], header=-1,
+                                 names=["Systime", "ActivityID", "ActionID"], dtype=touchEventDataType)
+    return touchEventData
