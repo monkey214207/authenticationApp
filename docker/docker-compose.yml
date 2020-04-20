@@ -1,0 +1,15 @@
+version: "3.3"
+services:
+  postgres-auth-app:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: authApp
+      MYSQL_PASSWORD: Dev#2020
+      MYSQL_DATABASE: auth
+    ports:
+      - 3309:3306
+    volumes:
+      - data-postgres-auth-app:/var/lib/postgresql/data
+volumes:
+  data-postgres-auth-app:
