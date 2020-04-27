@@ -11,3 +11,5 @@ venv/
 gradle.properties
 
 .DS_Store
+
+/notebook/model
