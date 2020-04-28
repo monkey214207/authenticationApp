@@ -1,13 +1,16 @@
-# authenticationApp
-1. 运行docker-compose -f docker/docker-compose.yml up -d启动 mysql5.7 docker容器
+## 文件介绍
+
+[converter-h5-pb.ipynb](https://github.com/monkey214207/authenticationApp/blob/master/notebook/converter-h5-pb.ipynb): convert keras model (.h5) to tensorflow model (.pb)
+
+
+
+##  参考
+
+- https://github.com/dynobo/ContinAuth
+
+CNN+OCSVM训练过程详见[chapter-5-5-siamese-cnn.ipynb](https://github.com/dynobo/ContinAuth/blob/master/notebooks/chapter-5-5-siamese-cnn.ipynb)
 
 
 
 
-
-Data source: [H-MOG Data Set](http://www.cs.wm.edu/~qyang/hmog.html)
-
-Reference: https://github.com/dynobo/ContinAuth
-
-convert keras model (.h5) to tensorflow model (.pb): https://github.com/Tony607/keras-tf-pb
 
